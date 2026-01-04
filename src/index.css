@@ -119,6 +119,7 @@ main{
     background-color: var(--bg-secondary);
 }
 .user-item{
+    position: relative;
     background-color: var(--bg-main);
     padding: 20px;
     border-radius: 10px;
@@ -136,6 +137,9 @@ main{
     object-fit: cover;
     margin-bottom: 15px;
 }
+.hidden{
+    display: none;
+}
 
 .user-name{
     font-size: 1.2rem;
@@ -149,4 +153,14 @@ main{
 }
 .user-list-title{
     color: var(--text-main);
+}
+#delete__btn{
+    color: var(--text-main);
+    cursor: pointer;
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }

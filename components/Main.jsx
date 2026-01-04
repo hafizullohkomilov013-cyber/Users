@@ -91,11 +91,14 @@ function Main() {
       <ul className="user-list">
         {users.map((user, index) => (
           <li className="user-item" key={index}>
-            <img
-              className="user-img"
-              src={user.img}
-              alt={`${user.name} ${user.lastName}`}
-            />
+              <img
+                className="user-img"
+                src={user.img}
+                alt={`${user.name} ${user.lastName}`}
+              />
+              <button id="delete__btn" className="user__delete--btn">
+                <i className="fa-solid fa-broom"></i>
+              </button>
             <h2>{`${user.name} ${user.lastName}`}</h2>
             <div>
               <p>Phone: {user.phone}</p>
@@ -114,8 +117,14 @@ function Main() {
 }
 
 document.addEventListener("click", (e) => {
-  console.log(e);
+  console.log(e.target.tagName);
   
-})
+  if (e.target.tagName === "I") {
+    e.preventDefault();
+    console.log(e.target.parentElement.parentElement);
+    
+    e.target.parentElement.parentElement.classList.add("hidden");
+  }
+});
 
 export default Main;
