@@ -116,9 +116,7 @@ function Main() {
   );
 }
 
-document.addEventListener("click", (e) => {
-  console.log(e.target.tagName);
-  
+document.addEventListener("click", (e) => {  
   if (e.target.tagName === "I") {
     e.preventDefault();
     console.log(e.target.parentElement.parentElement);
